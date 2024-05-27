@@ -1,0 +1,62 @@
+<script>
+
+    // array 2 dimensi
+    var motor = [
+        // kol (kolom) 0, kol 1, kol 2
+        ['Nmax', 'Aerox', ['Mio J', 'Mio Gear']],           // baris ke-0
+        ['PCX', 'Vario', ['Beat Street', 'Beat Deluxe']],   // baris ke-1
+        ['GSX', 'Nex', 'Smash'],                            // baris ke-2
+    ]
+    console.log(motor)
+    console.log(motor[1][2][1])                             // console.log(variabel[baris][kolom])
+    
+    // latihan
+    var murid = [
+        [1, 'Vincent', 3.5],
+        [2, 'Udin', 3.0],
+        [3, 'Mamang', 2.1],
+        // misal data bertambah
+        [4, 'Aji', 3.8],
+        [5, 'Gagan', 3.9],
+        [6, 'Ami', 3.7],
+        [7, 'Donny', 3.6],
+        [8, 'Fajar', 3.3],
+    ]
+
+    // nulis langsung dari array:
+    // document.write(murid[0][0] + '. ' + murid[0][1] + ', ' + 'IPK = ' + murid[0][2] + (murid[0][2] >= 3.0) ? 'Lulus' : 'Gagal')
+
+    var vincent_no      = murid[0][0] + '. '
+    var vincent_nama    = murid[0][1] + ', '
+    var vincent_ipk     = 'IPK = ' + murid[0][2] + ' '
+    var vincent_status  = (murid[0][2] >= 3.0) ? 'Lulus' : 'Gagal' // if-else versi sebaris (ternary operator)
+        
+    var udin_no         = murid[1][0] + '. '
+    var udin_nama       = murid[1][1] + ', '
+    var udin_ipk        = 'IPK = ' + murid[1][2] + ' '
+    var udin_status     = (murid[1][2] >= 3.0) ? 'Lulus' : 'Gagal' // if-else versi sebaris (ternary operator)
+    
+    var mamang_no       = murid[2][0] + '. '
+    var mamang_nama     = murid[2][1] + ', '
+    var mamang_ipk      = 'IPK = ' + murid[2][2] + ' '
+    var mamang_status   = (murid[2][2] >= 3.0) ? 'Lulus' : 'Gagal' // if-else versi sebaris (ternary operator)
+
+    // nulis langsung dengan variabel baru
+    // output secara manual
+    // document.write(vincent_no + vincent_nama + vincent_ipk + vincent_status + '<br>')
+    // document.write(udin_no + udin_nama + udin_ipk + udin_status + '<br>')    
+    // document.write(mamang_no + mamang_nama + mamang_ipk + mamang_status)
+
+    // looping, output-nya otomatis
+    for (let i = 0; i < murid.length; i++) {
+        var no      = murid[i][0] + '. '
+        var nama    = murid[i][1] + ', '
+        var ipk     = 'IPK = ' + murid[i][2] + ' '
+        var status  = (murid[i][2] >= 3.0) ? '<span style="color:green">Lulus</span>' : '<span style="color:red">Gagal</span>'
+        // kalo mau pake tanda centang atau tanda silang html code 
+        // var status  = (murid[i][2] >= 3.0) ? '<span>&#x2705;</span>' : '<span>&#10060;</span>'
+        
+        document.write(no + nama + ipk + status + '<br>')
+    }
+
+</script>

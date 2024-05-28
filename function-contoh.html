@@ -1,0 +1,40 @@
+<script>
+
+    function cetak_slip_gaji(staff, periode, gajian, upahLembur, BPJS, totalgajian) {
+                
+        // syntax concat modern
+        document.write(
+            `Slip Gaji Periode ${periode}
+            <hr>
+            Staff: ${staff} <br>
+            Gaji: Rp${gajian.toLocaleString('id-ID')},- <br>
+            Lembur: Rp${upahLembur.toLocaleString('id-ID')},- <br>
+            <u>Potongan BPJS: Rp${BPJS.toLocaleString('id-ID')},- </u><br>
+            Total: Rp${totalgajian.toLocaleString('id-ID')},- <br><br><br>`
+        )
+
+        // syntax concat tradisional
+        // document.write(
+        //     'Slip Gaji periode ' + periode + 
+        //     '<hr>' + 
+        //     'Staff: ' + staff + '<br>' +
+        //     'Gaji: Rp' + gajian.toLocaleString('id-ID') + ',-' + '<br>' +
+        //     'Lembur: Rp' + upahLembur.toLocaleString('id-ID') + ',-' + '<br>' +
+        //     '<u>Potongan BPJS: Rp' + BPJS.toLocaleString('id-ID') + ',-' + '</u><br>' +
+        //     'Total: Rp' + totalgajian.toLocaleString('id-ID') + ',-' + '<br><br><br>'
+        // )        
+    }
+    
+    function proses_perhitungan_gaji(staff, periode, hariKerja, gajiPerHari, jamLembur = 0) {
+        var gajian      = gajiPerHari * hariKerja
+        var upahLembur  = (gajiPerHari / 8) * jamLembur
+        var BPJS        = gajian * 2 / 100
+        var totalgajian = (gajian + upahLembur) - BPJS
+        cetak_slip_gaji(staff, periode, gajian, upahLembur, BPJS, totalgajian)
+    }
+
+    proses_perhitungan_gaji('Ami', 'Mei 2024', 20, 150000, 5)
+    proses_perhitungan_gaji('Donny', 'Mei 2024', 22, 150000)
+    proses_perhitungan_gaji('Elang', 'Mei 2024', 22, 185000)
+
+</script>

@@ -1,0 +1,35 @@
+<script>
+
+    // simple function
+    // membuat function
+    function ucap_salam() {
+        console.log('Halo, nama saya Ami')
+        document.write('Halo, nama saya Ami')
+    }
+
+    // menggunakan atau memanggil function
+    ucap_salam()
+    
+
+    function halo(nama_orang, alamat = '', pekerjaan) {
+    // kosongin yang tanda '' biar ngga undefined, isi nama negara kalo ngga ada nama daerah
+        if (alamat) {
+            console.log('Halo, nama saya ' + nama_orang + ', saya tinggal di ' + alamat + ', profesi saya ' + pekerjaan)
+        } else {
+            console.log('Halo, nama saya ' + nama_orang + ', profesi saya ' + pekerjaan)
+        }
+    }
+    halo('Ayesha')
+    // jika ada parameter opsional, maka bisa diisi dengan null atau string kosong...
+    // ...ketika memanggil function tersebut
+    halo('Ayesha', null, 'Programmer')
+    halo('Ayesha', 'Bandung', 'Programmer')
+    
+
+    // contoh lain, karangan sendiri:
+    // function perkenalan_diri(nama_orang, alamat, profesi, nama_perusahaan) {
+    //     console.log('Halo, nama saya ' + nama_orang + ', saya tinggal di ' + alamat + '. ' + 'Saya adalah seorang ' + profesi + ' di ' + nama_perusahaan + '.')
+    // }
+    // perkenalan_diri('Ami', 'Pamulang', 'Mahasiswa', 'Universitas Terbuka')
+    
+</script>

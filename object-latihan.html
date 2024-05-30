@@ -1,0 +1,49 @@
+<script>
+    
+    var ami = {
+        nama: 'Ami',
+        beratBadan: 58,
+        tinggiBadan: 161,
+        hobi: ['Mendengarkan musik', 'Menulis blog', 'Tidur', 'Scrolling medsos'],
+        sebutkanHobi: function() {
+            var semuaHobi = ''
+            
+            // konsep penambahan ke diri sendiri
+            // var semuaHobi = semuaHobi + nilai baru
+
+            // var semuaHobi = '' + 'makan'
+            // var semuaHobi = 'makan' + 'nonton'
+            // var semuaHobi = 'makan nonton' + 'shopping'
+            // var semuaHobi = 'makan nonton shopping' + 'rebahan'
+            // var semuaHobi = 'makan nonton shopping rebahan'
+            for (let i = 0; i < this.hobi.length; i++) {
+                semuaHobi = semuaHobi + (i+1) + '. ' + this.hobi[i] + '\n';  
+                // semuaHobi += (i+1) + '. ' + this.hobi[i] + '\n'              
+            }            
+            console.log(
+                `Hobi ${this.nama}:\n` +
+                semuaHobi
+            )
+
+            // console.log(
+            // `Hobi ${this.nama}:\n` +
+            // `1. ${this.hobi[0]}\n` +
+            // `2. ${this.hobi[1]}`
+            // )
+        }
+    }
+    // ami.sebutkanHobi()
+
+    // konsep penambahan ke diri sendiri
+    var presiden = 'Soekarno '
+    presiden = presiden + 'Soeharto '
+    presiden = presiden + 'Habibie '
+    console.log(presiden)
+
+    var peserta = 'Gagan '
+    peserta += 'Donny '
+    peserta += 'Elang '
+    peserta += 'Ami '
+    console.log(peserta)
+
+</script>

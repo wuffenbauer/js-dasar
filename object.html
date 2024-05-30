@@ -1,0 +1,41 @@
+<script>
+
+    var mahasiswa = {
+        // key: value
+        nama: 'Amirah Puspadewi', 
+        ipk: 3.46, 
+        statusLulus: function() { // function anonymous
+            if (this.ipk >= 3) {
+                // tujuan akhirnya untuk mencetak ke view/html
+                // console.log('Lulus')
+
+                // tujuan akhir untuk menghasilkan data
+                // yang akan digunakan oleh object/logic yg lain
+                return 'Lulus'
+            } else {
+                return 'Gagal'
+            }
+
+            // menghasilkan data string
+            // var cek = (this.ipk >= 3) ? 'Lulus' : 'Gagal'
+            // return cek
+
+            // menghasilkan output
+            // (this.ipk >= 3) ? 'Lulus' : 'Gagal'
+        },
+        cetakRapor: function() {
+            console.log(
+                `
+                Rapor ${this.nama}
+                ===============================
+                Indeks Prestasi Kumulatif: ${this.ipk}
+                Status Kelulusan: ${this.statusLulus()}`
+            )
+        }
+    }
+
+    // console.log(mahasiswa.nama)
+    console.log(mahasiswa['nama'])
+    mahasiswa.cetakRapor()
+
+</script>

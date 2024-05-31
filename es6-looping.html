@@ -1,0 +1,21 @@
+<script>
+
+    let presiden = ['Soekarno', 'Soeharto', 'Habibie', 'Gus Dur']
+
+    //looping tradisional
+    for (let i = 0; i < presiden.length; i++) {
+        console.log(presiden[i])       
+    }
+    
+    // looping es6
+    // permainan penulisan dari looping tradisional
+    presiden.forEach(prs => {
+        console.log(prs)
+    })
+
+    // const boleh diganti jadi let, tapi tidak boleh jadi var
+    for (const i in presiden) {
+        console.log(presiden[i])
+    }
+
+</script>

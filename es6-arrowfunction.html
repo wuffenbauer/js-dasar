@@ -1,0 +1,25 @@
+<script>
+
+    // membuat function secara tradisional
+    function salamKenal(namaOrang) {
+        console.log(`Hai, nama saya ${namaOrang}`)
+    }
+
+    // membuat function secara es5,
+    // function bisa dimasukkan ke dalam variabel
+    // dengan syarat, function tanpa pakai nama
+    let salamKenal = function (namaOrang) {
+        console.log(`Hai, nama saya ${namaOrang}`)
+    }
+
+    // membuat function secara es6,
+    // keyword function bisa digantikan dengan => (tanda panah)
+    // atau biasa disebut arrow function
+    let salamKenal = (namaOrang) => {
+        console.log(`Hai, nama saya ${namaOrang}`)
+    }
+
+    //panggil function-nya
+    salamKenal('Ami')
+
+</script>
